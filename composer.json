@@ -1,0 +1,20 @@
+{
+    "name": "kneipp/laravel-auth-starter",
+    "description": "Laravel 5.4 Auth Starter Kit.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fabrício Kneipp",
+            "email": "fabricio.kneipp@gmail.com"
+        }
+    ],
+    "require": {
+        "klaravel/ntrust": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kneipp\\LaravelAuthStarter\\": "src/LaravelAuthStarter/"
+        }
+    },
+    "minimum-stability": "dev"
+}
