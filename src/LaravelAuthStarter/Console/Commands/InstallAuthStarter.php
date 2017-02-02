@@ -37,10 +37,10 @@ class InstallAuthStarter extends Command
      */
     public function handle()
     {
-        exec('php artisan make:auth');
-        exec('php artisan vendor:publish --provider="Kneipp\LaravelAuthStarter\LaravelAuthStarterServiceProvider"');
-        exec('php artisan migrate');
-        exec('composer dump-autoload');
-        exec('php artisan db:seed --class=LaravelAuthStarterTableSeeder');
+        system('php artisan make:auth');
+        system('php artisan vendor:publish --provider="Kneipp\LaravelAuthStarter\LaravelAuthStarterServiceProvider"');
+        system('php artisan migrate');
+        system('composer dump-autoload');
+        system('php artisan db:seed --class=LaravelAuthStarterTableSeeder');
     }
 }
