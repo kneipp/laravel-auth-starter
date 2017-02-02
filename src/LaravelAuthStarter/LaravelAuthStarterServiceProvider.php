@@ -3,6 +3,7 @@
 namespace Kneipp\LaravelAuthStarter;
 
 use Illuminate\Support\ServiceProvider;
+use Kneipp\LaravelAuthStarter\Console\Commands\InstallAuthStarter;
 
 class LaravelAuthStarterServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,11 @@ class LaravelAuthStarterServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                InstallAuthStarter::class,
+            ]);
+        }
     }
 
     /**

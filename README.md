@@ -21,15 +21,25 @@ Kneipp\LaravelAuthStarter\LaravelAuthStarterServiceProvider::class,
 
 ### Step 3: Almost done
 
-- Run: php make:auth
+Run:
+ 
+```
+php artisan kneipp:auth
+```
+ 
+or manually:
 
-- Run: php artisan vendor:publish --provider="Kneipp\LaravelAuthStarter\LaravelAuthStarterServiceProvider"
-  
-- Run: php artisan migrate
+```
+php artisan make:auth
 
-- Run: composer dump-autoload 
+php artisan vendor:publish --provider="Kneipp\LaravelAuthStarter\LaravelAuthStarterServiceProvider"
 
-- Run: php artisan db:seed --class=LaravelAuthStarterTableSeeder
+php artisan migrate
+
+composer dump-autoload
+
+php artisan db:seed --class=LaravelAuthStarterTableSeeder
+```
 
 ### Models
 
